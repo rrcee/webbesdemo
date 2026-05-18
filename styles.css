@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        background-color: #000000;
+    }
+    body {
+        background-color: #000000;
+        color: #AAAAAA;
+        font-family: 'Poppins', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #FFFFFF;
+        font-weight: 600;
+    }
+}
+
+/* Custom Minimal Pastel Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background: #1A1A1A;
+    border-radius: 9999px;
+    border: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #A8D8B9;
+}
+
+/* Google Pixel Style Surface Cards */
+.pixel-card {
+    background-color: #0D0D0D;
+    border-radius: 24px;
+    padding: 32px;
+    transition: all 0.3s ease;
+}
+.pixel-card-mint {
+    border-top: 3px solid #A8D8B9;
+}
+.pixel-card-lavender {
+    border-top: 3px solid #B5CAFF;
+}
+.pixel-card-pink {
+    border-top: 3px solid #FFB5C8;
+}
+.pixel-card-peach {
+    border-top: 3px solid #FFD6A5;
+}
+
+/* Interactive Element Pastel Glow */
+.hover-glow-mint:hover {
+    box-shadow: 0 4px 24px rgba(168, 216, 185, 0.2);
+    transform: translateY(-2px);
+}
+.hover-glow-lavender:hover {
+    box-shadow: 0 4px 24px rgba(181, 202, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Focus Visible Accessibility */
+:focus-visible {
+    outline: 2px solid #A8D8B9;
+    outline-offset: 4px;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Active Navigation Pill */
+.nav-pill-active {
+    background-color: rgba(168, 216, 185, 0.15) !important;
+    color: #A8D8B9 !important;
+}
+
+/* Active Bento Tab */
+.bento-tab-active {
+    background-color: #1A1A1A !important;
+    border-top: 3px solid #A8D8B9 !important;
+}

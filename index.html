@@ -6,12 +6,10 @@
     <title>Webbes — Elite Web Design, Engineering & AI Studio</title>
     <meta name="description" content="We are Webbes. The digital agency that's going to build your brand. Web Design · AI Automation · E-Commerce · Kochi, India">
     
-    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,50 +34,55 @@
         }
     </script>
     
-    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Motion Vanilla CDN -->
     <script src="https://cdn.jsdelivr.net/npm/motion@11.11.0/dist/motion.global.js"></script>
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preload" as="image" href="images/ezgif-frame-001.jpg">
+    <link rel="preload" as="image" href="images/ezgif-frame-002.jpg">
+    <link rel="preload" as="image" href="images/ezgif-frame-003.jpg">
 </head>
 <body class="bg-black text-[#AAAAAA] selection:bg-[#A8D8B9] selection:text-black overflow-x-hidden font-sans antialiased text-base md:text-lg">
+
+    <div id="shimmer-intro" class="fixed inset-0 z-[999] pointer-events-none">
+        <div class="shimmer-sweep"></div>
+    </div>
     
-    <!-- Navigation Bar (Google Pixel Black Pill Nav) -->
-    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-6 md:px-16 pt-8 pb-4 transition-all duration-300">
-        <div id="nav-container" class="max-w-7xl mx-auto flex items-center justify-between py-3 px-8 rounded-[9999px] bg-black/90 backdrop-blur-xl border border-white/5 transition-all duration-300">
-            <!-- Brand Logo -->
-            <a href="#" aria-label="Webbes Homepage" class="font-sans font-bold tracking-[0.2em] text-lg uppercase text-[#FFFFFF]" id="nav-logo">
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-4 md:px-16 pt-6 pb-3 transition-all duration-300">
+        <div id="nav-container" class="max-w-7xl mx-auto flex items-center justify-between py-3 px-5 md:px-8 rounded-[9999px] bg-black/90 backdrop-blur-xl border border-white/5 transition-all duration-300 shadow-2xl">
+            <a href="#" aria-label="Webbes Homepage" class="font-sans font-bold tracking-[0.2em] text-base md:text-lg uppercase text-[#FFFFFF] glare-fx" id="nav-logo">
                 Webbes<span class="text-[#A8D8B9]">.</span>
             </a>
 
-            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Main Navigation">
-                <a href="#story" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all">Narrative</a>
-                <a href="#services" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all">Services</a>
-                <a href="#founders" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all">Founders</a>
-                <a href="#work" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all">Work</a>
-                <a href="#inquiry" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all">Contact</a>
+                <a href="#story" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all glare-fx">Narrative</a>
+                <a href="#services" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all glare-fx">Services</a>
+                <a href="#founders" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all glare-fx">Founders</a>
+                <a href="#work" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all glare-fx">Work</a>
+                <a href="#inquiry" class="nav-link px-5 py-2 rounded-[9999px] text-sm font-medium text-[#AAAAAA] hover:text-[#FFFFFF] hover:bg-[#1A1A1A] transition-all glare-fx">Contact</a>
             </nav>
 
-            <!-- Direct CTA Pill Button -> Redirects to +91 8075 959 157 -->
             <div class="flex items-center">
-                <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Inquiry (+91 8075 959 157)" id="nav-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-[9999px] bg-[#A8D8B9] text-[#000000] font-semibold text-xs tracking-wider uppercase transition-all hover-glow-mint">
-                    <i data-lucide="phone" class="w-4 h-4 text-[#000000]"></i>
+                <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Webbes Studio" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#A8D8B9] text-[#000000] transition-all hover-glow-mint glare-fx">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Inquiry (+91 8075 959 157)" id="nav-btn" class="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-[9999px] bg-[#A8D8B9] text-[#000000] font-semibold text-xs tracking-wider uppercase transition-all hover-glow-mint glare-fx">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                    </svg>
                     <span>+91 8075 959 157</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Scroll-Driven Hero (Clean Filmic Area with No Glows or Cards) -->
     <section id="hero" class="relative w-full h-[500vh] bg-black">
         <div class="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center bg-black">
-            <!-- HTML5 Canvas for Frame-by-Frame Cloud Animation -->
             <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full object-cover z-0"></canvas>
 
-            <!-- Preloader Overlay -->
             <div id="canvas-loader" class="absolute inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-700" role="status" aria-live="polite">
                 <div class="flex flex-col items-center gap-4 text-center px-6 text-[#FFFFFF] font-mono uppercase text-xs tracking-widest">
                     <div class="w-8 h-8 border-2 border-[#A8D8B9] border-t-transparent rounded-full animate-spin"></div>
@@ -87,25 +90,18 @@
                 </div>
             </div>
 
-            <!-- Soft white radial gradient fade below animation zone -->
-            <div class="absolute bottom-0 left-0 right-0 h-64 bg-radial-bottom from-white/[0.03] to-transparent pointer-events-none z-10"></div>
-
-            <!-- Cinematic Storytelling Headlines -->
             <div class="absolute inset-0 z-20 flex items-center justify-center px-4 pointer-events-none text-center">
-                <!-- Slide 1: Initial Brand Tagline (Pure White Filmic Text over Void before Cloud Forms) -->
                 <div id="hero-text-1" class="absolute max-w-4xl mx-auto flex flex-col items-center gap-6 transition-all duration-700 ease-out px-4">
-                    <span class="text-xs font-mono uppercase tracking-[0.3em] text-[#AAAAAA]">Digital Agency // Kochi, India</span>
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#FFFFFF] leading-[1.1]">
+                    <span class="text-xs font-mono uppercase tracking-[0.3em] text-white/70">Digital Agency // Kochi, India</span>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
                         We are Webbes.<br>
-                        <span class="text-white/70">The digital agency that's going to build your brand.</span>
+                        <span class="text-white/80">The digital agency that's going to build your brand.</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-[#AAAAAA] font-medium tracking-wide max-w-xl">
+                    <p class="text-lg md:text-xl text-white font-medium tracking-wide max-w-xl">
                         Web Design &middot; AI Automation &middot; E-Commerce &middot; Kochi, India
                     </p>
-                    <span class="mt-8 text-xs font-mono uppercase tracking-[0.2em] text-[#AAAAAA]/40 animate-pulse">Scroll to explore</span>
                 </div>
 
-                <!-- Slide 2: Solid Cloud Formed (Black Text inside Cloud Boundaries) -->
                 <div id="hero-text-2" class="absolute max-w-[280px] sm:max-w-xs md:max-w-sm mx-auto flex flex-col items-center gap-4 opacity-0 translate-y-12 transition-all duration-700 ease-out px-4 text-center">
                     <span class="text-xs font-mono uppercase tracking-[0.2em] text-black font-extrabold tracking-wider bg-white/40 px-3 py-1 rounded-full backdrop-blur-sm">The Boutique Standard</span>
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-black leading-tight">
@@ -117,7 +113,6 @@
                     </p>
                 </div>
 
-                <!-- Slide 3: Cloud Rotating (Black Text inside Cloud Boundaries) -->
                 <div id="hero-text-3" class="absolute max-w-[280px] sm:max-w-xs md:max-w-sm mx-auto flex flex-col items-center gap-4 opacity-0 translate-y-12 transition-all duration-700 ease-out px-4 text-center">
                     <span class="text-xs font-mono uppercase tracking-[0.2em] text-black font-extrabold tracking-wider bg-white/40 px-3 py-1 rounded-full backdrop-blur-sm">Absolute Sovereignty</span>
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-black leading-tight">
@@ -132,33 +127,32 @@
         </div>
     </section>
 
-    <!-- Brand Story & Real Data (Google Pixel Cards with Pastel Accents) -->
-    <section id="story" class="py-32 md:py-48 px-6 md:px-16 bg-black">
+    <section id="story" class="py-32 md:py-48 px-6 md:px-16 bg-black parallax-section">
         <div class="max-w-5xl mx-auto">
-            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#A8D8B9]/10 text-[#A8D8B9] mb-8 font-medium text-xs tracking-wider uppercase">
+            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#A8D8B9]/10 text-[#A8D8B9] mb-8 font-medium text-xs tracking-wider uppercase reveal-up glare-fx">
                 <i data-lucide="sparkles" class="w-4 h-4 text-[#A8D8B9]"></i>
                 <span>01 // The Philosophy</span>
             </div>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] leading-[1.15] mb-16">
-                “We are Webbes. The digital agency that's going to build your brand.”
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] leading-[1.15] mb-16 reveal-up" style="--delay:0.1s">
+                "We are Webbes. The digital agency that's going to build your brand."
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="pixel-card pixel-card-mint flex flex-col justify-between">
-                    <p class="text-lg md:text-xl text-[#AAAAAA] font-normal leading-relaxed mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div class="pixel-card pixel-card-mint shimmer-card glare-fx flex flex-col justify-between reveal-up" style="--delay:0.2s">
+                    <p class="text-lg md:text-xl text-[#AAAAAA] font-normal leading-relaxed mb-8 relative z-10">
                         Based in Kochi, India, Webbes is structured for elite execution. Most agencies operate as sales organizations, handing your critical digital product over to outsourced junior developers. We eliminate the layers.
                     </p>
-                    <div class="flex items-center gap-3 pt-6 border-t border-white/5">
+                    <div class="flex items-center gap-3 pt-6 border-t border-white/5 relative z-10">
                         <i data-lucide="shield-check" class="w-6 h-6 text-[#A8D8B9]"></i>
                         <span class="text-sm text-[#FFFFFF] font-medium">Flawless execution guarantee</span>
                     </div>
                 </div>
 
-                <div class="pixel-card pixel-card-lavender flex flex-col justify-between">
-                    <p class="text-lg md:text-xl text-[#AAAAAA] font-normal leading-relaxed mb-8">
+                <div class="pixel-card pixel-card-lavender shimmer-card glare-fx flex flex-col justify-between reveal-up" style="--delay:0.3s">
+                    <p class="text-lg md:text-xl text-[#AAAAAA] font-normal leading-relaxed mb-8 relative z-10">
                         When you partner with Webbes, you speak directly with the engineers and strategists who design your architecture, craft your copy, and engineer your platform. Absolute clarity and zero lost vision.
                     </p>
-                    <div class="flex items-center gap-3 pt-6 border-t border-white/5">
+                    <div class="flex items-center gap-3 pt-6 border-t border-white/5 relative z-10">
                         <i data-lucide="users" class="w-6 h-6 text-[#B5CAFF]"></i>
                         <span class="text-sm text-[#FFFFFF] font-medium">Direct founder-led communication</span>
                     </div>
@@ -167,28 +161,25 @@
         </div>
     </section>
 
-    <!-- Services (Bento Grid with Pixel Surface Theme & Real Capabilities) -->
-    <section id="services" class="py-32 md:py-40 px-6 md:px-16 bg-black border-t border-white/5">
+    <section id="services" class="py-32 md:py-40 px-6 md:px-16 bg-black border-t border-white/5 parallax-section">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-                <div>
-                    <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#B5CAFF]/10 text-[#B5CAFF] mb-6 font-medium text-xs tracking-wider uppercase">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-8">
+                <div class="reveal-up">
+                    <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#B5CAFF]/10 text-[#B5CAFF] mb-6 font-medium text-xs tracking-wider uppercase glare-fx">
                         <i data-lucide="layers" class="w-4 h-4 text-[#B5CAFF]"></i>
                         <span>02 // Studio Services</span>
                     </div>
                     <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-[#FFFFFF]">Uncompromising mastery.</h2>
                 </div>
-                <p class="text-lg text-[#AAAAAA] max-w-md font-light">
+                <p class="text-lg text-[#AAAAAA] max-w-md font-light reveal-up" style="--delay:0.15s">
                     Web Design · AI Automation · E-Commerce · Kochi, India
                 </p>
             </div>
 
-            <!-- Bento Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Service 1: Website Development -->
-                <div class="pixel-card pixel-card-mint flex flex-col justify-between hover-glow-mint lg:col-span-2">
-                    <div>
-                        <div class="w-12 h-12 rounded-[16px] bg-[#1A1A1A] flex items-center justify-center mb-8 border border-white/5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="pixel-card pixel-card-mint shimmer-card glare-fx flex flex-col justify-between hover-glow-mint lg:col-span-2 reveal-up" style="--delay:0.05s">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-[16px] bg-[#1A1A1A] flex items-center justify-center mb-8 border border-white/5 shadow-inner">
                             <i data-lucide="code" class="w-6 h-6 text-[#A8D8B9]"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-[#FFFFFF] mb-4">Website Development</h3>
@@ -196,16 +187,15 @@
                             Bespoke digital platforms, immersive scroll motion, and ultra-fast web architectures engineered with pristine code and flawless core web vitals.
                         </p>
                     </div>
-                    <div class="space-y-2 text-sm text-[#A8D8B9] border-t border-white/5 pt-6 font-medium">
+                    <div class="space-y-2 text-sm text-[#A8D8B9] border-t border-white/5 pt-6 font-medium relative z-10">
                         <div>+ High-Conversion UX Hierarchy</div>
                         <div>+ 100% Repository Sovereignty</div>
                     </div>
                 </div>
 
-                <!-- Service 2: E-Commerce -->
-                <div class="pixel-card pixel-card-peach flex flex-col justify-between hover:translate-y-[-2px] transition-all lg:col-span-2">
-                    <div>
-                        <div class="w-12 h-12 rounded-[16px] bg-[#1A1A1A] flex items-center justify-center mb-8 border border-white/5">
+                <div class="pixel-card pixel-card-peach shimmer-card glare-fx flex flex-col justify-between hover:translate-y-[-2px] transition-all lg:col-span-2 reveal-up" style="--delay:0.1s">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-[16px] bg-[#1A1A1A] flex items-center justify-center mb-8 border border-white/5 shadow-inner">
                             <i data-lucide="shopping-bag" class="w-6 h-6 text-[#FFD6A5]"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-[#FFFFFF] mb-4">E-Commerce Architecture</h3>
@@ -213,111 +203,99 @@
                             High-performance storefronts optimized to eliminate checkout friction, manage inventory surges flawlessly, and maximize average order value.
                         </p>
                     </div>
-                    <div class="space-y-2 text-sm text-[#FFD6A5] border-t border-white/5 pt-6 font-medium">
+                    <div class="space-y-2 text-sm text-[#FFD6A5] border-t border-white/5 pt-6 font-medium relative z-10">
                         <div>+ Flawless Checkout Optimization</div>
                         <div>+ High-Volume Scalability</div>
                     </div>
                 </div>
 
-                <!-- Service 3: AI Automation -->
-                <div class="pixel-card pixel-card-pink flex flex-col justify-between hover:translate-y-[-2px] transition-all lg:col-span-2">
-                    <div>
-                        <div class="w-12 h-12 rounded-[16px] bg-[#1A1A1A] flex items-center justify-center mb-8 border border-white/5">
+                <div class="pixel-card pixel-card-pink shimmer-card glare-fx flex flex-col justify-between hover:translate-y-[-2px] transition-all lg:col-span-2 reveal-up" style="--delay:0.15s">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-[16px] bg-[#1A1A1A] flex items-center justify-center mb-8 border border-white/5 shadow-inner">
                             <i data-lucide="bot" class="w-6 h-6 text-[#FFB5C8]"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#FFFFFF] mb-4">AI Automation</h3>
+                        <h3 class="text-2xl font-bold text-[#FFFFFF] mb-4">AI Automation Systems</h3>
                         <p class="text-[#AAAAAA] font-normal leading-relaxed mb-8">
-                            Autonomous LLM workflows that eliminate human operational friction, automating client communications, knowledge syncs, and backend processes.
+                            Intelligent automation pipelines, AI-powered workflows, and custom-built LLM integrations that eliminate operational redundancy and accelerate scale.
                         </p>
                     </div>
-                    <div class="space-y-2 text-sm text-[#FFB5C8] border-t border-white/5 pt-6 font-medium">
-                        <div>+ Custom Autonomous Agents</div>
-                        <div>+ Seamless API Integrations</div>
+                    <div class="space-y-2 text-sm text-[#FFB5C8] border-t border-white/5 pt-6 font-medium relative z-10">
+                        <div>+ Custom LLM Integration</div>
+                        <div>+ Full Workflow Automation</div>
                     </div>
                 </div>
 
-                <!-- Service 4: SEO & AEO -->
-                <div class="pixel-card pixel-card-lavender flex flex-col justify-between hover-glow-lavender lg:col-span-2">
-                    <div>
-                        <div class="w-12 h-12 rounded-[16px] bg-[#1A1A1A] flex items-center justify-center mb-8 border border-white/5">
-                            <i data-lucide="search" class="w-6 h-6 text-[#B5CAFF]"></i>
+                <div class="pixel-card pixel-card-lavender shimmer-card glare-fx flex flex-col justify-between hover:translate-y-[-2px] transition-all lg:col-span-2 reveal-up" style="--delay:0.2s">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-[16px] bg-[#1A1A1A] flex items-center justify-center mb-8 border border-white/5 shadow-inner">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-[#B5CAFF]"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#FFFFFF] mb-4">SEO & Answer Engine Optimization (AEO)</h3>
+                        <h3 class="text-2xl font-bold text-[#FFFFFF] mb-4">Brand & Growth Strategy</h3>
                         <p class="text-[#AAAAAA] font-normal leading-relaxed mb-8">
-                            Positioning your brand not just for Google search ranking, but as the definitive market authority recommended by conversational AI platforms (ChatGPT, Perplexity, Gemini).
+                            Data-driven brand architecture, SEO authority structures, and conversion-optimized content systems that compound in value over time.
                         </p>
                     </div>
-                    <div class="space-y-2 text-sm text-[#B5CAFF] border-t border-white/5 pt-6 font-medium">
-                        <div>+ Structured Schema & High-Intent Ranking</div>
-                        <div>+ LLM Discovery Optimization</div>
+                    <div class="space-y-2 text-sm text-[#B5CAFF] border-t border-white/5 pt-6 font-medium relative z-10">
+                        <div>+ SEO Authority Architecture</div>
+                        <div>+ Compound Growth Systems</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Founders Section (Real Webbes Founder Data) -->
-    <section id="founders" class="py-32 md:py-40 px-6 md:px-16 bg-black border-t border-white/5">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-                <div>
-                    <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#A8D8B9]/10 text-[#A8D8B9] mb-6 font-medium text-xs tracking-wider uppercase">
-                        <i data-lucide="users" class="w-4 h-4 text-[#A8D8B9]"></i>
-                        <span>03 // The Founders</span>
-                    </div>
-                    <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-[#FFFFFF] mb-4">Two people. Every project.</h2>
-                    <p class="text-lg text-[#AAAAAA] max-w-2xl font-normal leading-relaxed">
-                        Webbes is Qais and Falah. No team of 40. No account managers. When you hire Webbes, you work directly with the people building your product — start to finish.
-                    </p>
-                </div>
+    <section id="founders" class="py-32 md:py-40 px-6 md:px-16 bg-black border-t border-white/5 parallax-section">
+        <div class="max-w-5xl mx-auto">
+            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#FFB5C8]/10 text-[#FFB5C8] mb-8 font-medium text-xs tracking-wider uppercase reveal-up glare-fx">
+                <i data-lucide="users" class="w-4 h-4 text-[#FFB5C8]"></i>
+                <span>03 // The Founders</span>
             </div>
-
-            <!-- Founders Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Founder 1: Qais -->
-                <div class="pixel-card pixel-card-mint flex flex-col justify-between hover-glow-mint">
-                    <div>
+            <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-[#FFFFFF] mb-16 reveal-up" style="--delay:0.1s">
+                Built by two obsessives.
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div class="pixel-card pixel-card-mint shimmer-card glare-fx flex flex-col justify-between hover-glow-mint reveal-up" style="--delay:0.15s">
+                    <div class="relative z-10">
                         <div class="flex items-center justify-between mb-8">
                             <div>
                                 <h3 class="text-3xl font-bold text-[#FFFFFF]">Qais</h3>
-                                <div class="text-sm font-mono text-[#A8D8B9] uppercase font-semibold mt-1">Founder &middot; Lead Engineer</div>
+                                <div class="text-sm font-mono text-[#A8D8B9] uppercase font-semibold mt-1">Co-Founder &middot; Lead Engineer</div>
                             </div>
-                            <div class="w-14 h-14 rounded-full bg-[#1A1A1A] border border-[#A8D8B9]/30 flex items-center justify-center text-[#A8D8B9]">
-                                <i data-lucide="terminal" class="w-7 h-7"></i>
+                            <div class="w-14 h-14 rounded-full bg-[#1A1A1A] border border-[#A8D8B9]/30 flex items-center justify-center text-[#A8D8B9] shadow-inner">
+                                <i data-lucide="code-2" class="w-7 h-7"></i>
                             </div>
                         </div>
                         <p class="text-lg text-[#AAAAAA] font-normal leading-relaxed mb-10 italic">
-                            “I handle the builds — design, development, and making sure everything we ship actually looks and works the way it should. I also do a bit of outreach when Falah lets me.”
+                            "I handle the builds — design, development, and making sure everything we ship actually looks and works the way it should. I also do a bit of outreach when Falah lets me."
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-white/5 flex items-center justify-between">
+                    <div class="pt-6 border-t border-white/5 flex items-center justify-between relative z-10">
                         <span class="text-xs font-mono uppercase tracking-wider text-[#AAAAAA]">Connect on Instagram</span>
-                        <a href="https://instagram.com/qaizx" target="_blank" rel="noopener noreferrer" aria-label="Qais Instagram Handle @qaizx" class="inline-flex items-center gap-2 px-5 py-2 rounded-[9999px] bg-[#1A1A1A] text-[#A8D8B9] text-sm font-semibold hover:bg-[#A8D8B9] hover:text-[#000000] transition-colors border border-white/10">
+                        <a href="https://instagram.com/qaizx" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2 rounded-[9999px] bg-[#1A1A1A] text-[#A8D8B9] text-sm font-semibold hover:bg-[#A8D8B9] hover:text-[#000000] transition-colors border border-white/10 glare-fx">
                             <i data-lucide="instagram" class="w-4 h-4"></i>
                             <span>@qaizx</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Founder 2: Falah -->
-                <div class="pixel-card pixel-card-lavender flex flex-col justify-between hover-glow-lavender">
-                    <div>
+                <div class="pixel-card pixel-card-lavender shimmer-card glare-fx flex flex-col justify-between hover-glow-lavender reveal-up" style="--delay:0.25s">
+                    <div class="relative z-10">
                         <div class="flex items-center justify-between mb-8">
                             <div>
                                 <h3 class="text-3xl font-bold text-[#FFFFFF]">Falah</h3>
                                 <div class="text-sm font-mono text-[#B5CAFF] uppercase font-semibold mt-1">Co-Founder &middot; Lead Strategist</div>
                             </div>
-                            <div class="w-14 h-14 rounded-full bg-[#1A1A1A] border border-[#B5CAFF]/30 flex items-center justify-center text-[#B5CAFF]">
+                            <div class="w-14 h-14 rounded-full bg-[#1A1A1A] border border-[#B5CAFF]/30 flex items-center justify-center text-[#B5CAFF] shadow-inner">
                                 <i data-lucide="lightbulb" class="w-7 h-7"></i>
                             </div>
                         </div>
                         <p class="text-lg text-[#AAAAAA] font-normal leading-relaxed mb-10 italic">
-                            “I handle the strategy side — planning, scripting, content, blog writing, and getting Webbes in front of the right people. The brain behind the noise.”
+                            "I handle the strategy side — planning, scripting, content, blog writing, and getting Webbes in front of the right people. The brain behind the noise."
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-white/5 flex items-center justify-between">
+                    <div class="pt-6 border-t border-white/5 flex items-center justify-between relative z-10">
                         <span class="text-xs font-mono uppercase tracking-wider text-[#AAAAAA]">Connect on Instagram</span>
-                        <a href="https://instagram.com/muhammed_.falahh" target="_blank" rel="noopener noreferrer" aria-label="Falah Instagram Handle @muhammed_.falahh" class="inline-flex items-center gap-2 px-5 py-2 rounded-[9999px] bg-[#1A1A1A] text-[#B5CAFF] text-sm font-semibold hover:bg-[#B5CAFF] hover:text-[#000000] transition-colors border border-white/10">
+                        <a href="https://instagram.com/muhammed_.falahh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2 rounded-[9999px] bg-[#1A1A1A] text-[#B5CAFF] text-sm font-semibold hover:bg-[#B5CAFF] hover:text-[#000000] transition-colors border border-white/10 glare-fx">
                             <i data-lucide="instagram" class="w-4 h-4"></i>
                             <span>@muhammed_.falahh</span>
                         </a>
@@ -327,107 +305,105 @@
         </div>
     </section>
 
-    <!-- Case Studies / Official Projects -->
-    <section id="work" class="py-32 md:py-40 px-6 md:px-16 bg-black border-t border-white/5">
+    <section id="work" class="py-32 md:py-40 px-6 md:px-16 bg-black border-t border-white/5 parallax-section">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-                <div>
-                    <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#FFB5C8]/10 text-[#FFB5C8] mb-6 font-medium text-xs tracking-wider uppercase">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-8">
+                <div class="reveal-up">
+                    <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#FFB5C8]/10 text-[#FFB5C8] mb-6 font-medium text-xs tracking-wider uppercase glare-fx">
                         <i data-lucide="folder-check" class="w-4 h-4 text-[#FFB5C8]"></i>
                         <span>04 // Realized Projects</span>
                     </div>
                     <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-[#FFFFFF]">Proven market execution.</h2>
                 </div>
-                <p class="text-lg text-[#AAAAAA] max-w-md font-light">
+                <p class="text-lg text-[#AAAAAA] max-w-md font-light reveal-up" style="--delay:0.1s">
                     Sovereign digital platforms built by Webbes for market leaders across industries.
                 </p>
             </div>
 
-            <!-- Real Projects List -->
-            <div class="space-y-12">
-                <!-- Project 1: Pearl Imperial International -->
-                <div class="pixel-card pixel-card-mint flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 hover-glow-mint">
-                    <div class="max-w-2xl">
-                        <div class="flex items-center gap-3 text-xs font-mono text-[#A8D8B9] mb-4 uppercase font-semibold">
+            <div class="space-y-8 md:space-y-12">
+                <div class="pixel-card pixel-card-mint shimmer-card glare-fx flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 md:gap-10 hover-glow-mint reveal-up">
+                    <div class="max-w-2xl relative z-10">
+                        <div class="flex items-center gap-3 text-xs font-mono text-[#A8D8B9] mb-4 uppercase font-semibold flex-wrap">
                             <span>International Enterprise</span> <span class="text-white/30">//</span> <span>Global Trading</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-[#FFFFFF] mb-4 tracking-tight">
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFFFFF] mb-4 tracking-tight">
                             Pearl Imperial International
                         </h3>
                         <p class="text-[#AAAAAA] font-normal leading-relaxed mb-8">
                             Engineered an elite digital presence that instantly communicates global authority, showcasing international operations and premium supply chains.
                         </p>
-                        <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" aria-label="Inquire regarding Pearl Imperial International project" class="inline-flex items-center gap-2 px-6 py-3 rounded-[9999px] bg-[#1A1A1A] text-[#FFFFFF] font-semibold text-xs uppercase tracking-wider hover:bg-[#A8D8B9] hover:text-[#000000] transition-all">
-                            <span>Inquire via WhatsApp (+91 8075 959 157)</span>
+                        <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-[9999px] bg-[#1A1A1A] text-[#FFFFFF] font-semibold text-xs uppercase tracking-wider hover:bg-[#A8D8B9] hover:text-[#000000] transition-all glare-fx">
+                            <span class="hidden sm:inline">Inquire via WhatsApp</span>
+                            <span class="sm:hidden">WhatsApp</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
-                    <div class="flex flex-row lg:flex-col gap-8 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-10 shrink-0">
+                    <div class="flex flex-row lg:flex-col gap-8 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-10 shrink-0 w-full lg:w-auto relative z-10">
                         <div>
                             <div class="text-sm font-medium text-[#A8D8B9] uppercase tracking-wider font-mono">Scope</div>
-                            <div class="text-2xl font-bold text-[#FFFFFF] mt-1">Website Development</div>
+                            <div class="text-xl md:text-2xl font-bold text-[#FFFFFF] mt-1">Website Development</div>
                         </div>
                         <div>
                             <div class="text-sm font-medium text-[#AAAAAA] uppercase tracking-wider font-mono">Status</div>
-                            <div class="text-lg font-semibold text-[#A8D8B9] mt-1">Deployed Sovereign IP</div>
+                            <div class="text-base md:text-lg font-semibold text-[#A8D8B9] mt-1">Deployed Sovereign IP</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2: Dept Store -->
-                <div class="pixel-card pixel-card-peach flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 hover:translate-y-[-2px] transition-all">
-                    <div class="max-w-2xl">
-                        <div class="flex items-center gap-3 text-xs font-mono text-[#FFD6A5] mb-4 uppercase font-semibold">
+                <div class="pixel-card pixel-card-peach shimmer-card glare-fx flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 md:gap-10 hover:translate-y-[-2px] transition-all reveal-up" style="--delay:0.1s">
+                    <div class="max-w-2xl relative z-10">
+                        <div class="flex items-center gap-3 text-xs font-mono text-[#FFD6A5] mb-4 uppercase font-semibold flex-wrap">
                             <span>Modern Commerce</span> <span class="text-white/30">//</span> <span>High-Conversion Retail</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-[#FFFFFF] mb-4 tracking-tight">
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFFFFF] mb-4 tracking-tight">
                             Dept Store
                         </h3>
                         <p class="text-[#AAAAAA] font-normal leading-relaxed mb-8">
                             A high-velocity retail storefront designed for instantaneous product discovery, frictionless checkout flows, and peak conversion metrics.
                         </p>
-                        <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" aria-label="Inquire regarding Dept Store project" class="inline-flex items-center gap-2 px-6 py-3 rounded-[9999px] bg-[#1A1A1A] text-[#FFFFFF] font-semibold text-xs uppercase tracking-wider hover:bg-[#FFD6A5] hover:text-[#000000] transition-all">
-                            <span>Inquire via WhatsApp (+91 8075 959 157)</span>
+                        <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-[9999px] bg-[#1A1A1A] text-[#FFFFFF] font-semibold text-xs uppercase tracking-wider hover:bg-[#FFD6A5] hover:text-[#000000] transition-all glare-fx">
+                            <span class="hidden sm:inline">Inquire via WhatsApp</span>
+                            <span class="sm:hidden">WhatsApp</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
-                    <div class="flex flex-row lg:flex-col gap-8 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-10 shrink-0">
+                    <div class="flex flex-row lg:flex-col gap-8 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-10 shrink-0 w-full lg:w-auto relative z-10">
                         <div>
                             <div class="text-sm font-medium text-[#FFD6A5] uppercase tracking-wider font-mono">Scope</div>
-                            <div class="text-2xl font-bold text-[#FFFFFF] mt-1">E-Commerce Storefront</div>
+                            <div class="text-xl md:text-2xl font-bold text-[#FFFFFF] mt-1">E-Commerce Storefront</div>
                         </div>
                         <div>
                             <div class="text-sm font-medium text-[#AAAAAA] uppercase tracking-wider font-mono">Status</div>
-                            <div class="text-lg font-semibold text-[#FFD6A5] mt-1">Deployed Sovereign IP</div>
+                            <div class="text-base md:text-lg font-semibold text-[#FFD6A5] mt-1">Deployed Sovereign IP</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3: Prism India -->
-                <div class="pixel-card pixel-card-lavender flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 hover-glow-lavender">
-                    <div class="max-w-2xl">
-                        <div class="flex items-center gap-3 text-xs font-mono text-[#B5CAFF] mb-4 uppercase font-semibold">
+                <div class="pixel-card pixel-card-lavender shimmer-card glare-fx flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 md:gap-10 hover-glow-lavender reveal-up" style="--delay:0.2s">
+                    <div class="max-w-2xl relative z-10">
+                        <div class="flex items-center gap-3 text-xs font-mono text-[#B5CAFF] mb-4 uppercase font-semibold flex-wrap">
                             <span>National Enterprise</span> <span class="text-white/30">//</span> <span>Industrial Authority</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-[#FFFFFF] mb-4 tracking-tight">
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFFFFF] mb-4 tracking-tight">
                             Prism India
                         </h3>
                         <p class="text-[#AAAAAA] font-normal leading-relaxed mb-8">
                             Engineered an authoritative digital platform showcasing extensive industrial capabilities, infrastructure projects, and national reach.
                         </p>
-                        <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" aria-label="Inquire regarding Prism India project" class="inline-flex items-center gap-2 px-6 py-3 rounded-[9999px] bg-[#1A1A1A] text-[#FFFFFF] font-semibold text-xs uppercase tracking-wider hover:bg-[#B5CAFF] hover:text-[#000000] transition-all">
-                            <span>Inquire via WhatsApp (+91 8075 959 157)</span>
+                        <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-[9999px] bg-[#1A1A1A] text-[#FFFFFF] font-semibold text-xs uppercase tracking-wider hover:bg-[#B5CAFF] hover:text-[#000000] transition-all glare-fx">
+                            <span class="hidden sm:inline">Inquire via WhatsApp</span>
+                            <span class="sm:hidden">WhatsApp</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
-                    <div class="flex flex-row lg:flex-col gap-8 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-10 shrink-0">
+                    <div class="flex flex-row lg:flex-col gap-8 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-10 shrink-0 w-full lg:w-auto relative z-10">
                         <div>
                             <div class="text-sm font-medium text-[#B5CAFF] uppercase tracking-wider font-mono">Scope</div>
-                            <div class="text-2xl font-bold text-[#FFFFFF] mt-1">Website Development & SEO</div>
+                            <div class="text-xl md:text-2xl font-bold text-[#FFFFFF] mt-1">Website & SEO</div>
                         </div>
                         <div>
                             <div class="text-sm font-medium text-[#AAAAAA] uppercase tracking-wider font-mono">Status</div>
-                            <div class="text-lg font-semibold text-[#B5CAFF] mt-1">Deployed Sovereign IP</div>
+                            <div class="text-base md:text-lg font-semibold text-[#B5CAFF] mt-1">Deployed Sovereign IP</div>
                         </div>
                     </div>
                 </div>
@@ -435,55 +411,56 @@
         </div>
     </section>
 
-    <!-- Direct Contact Hub -> Redirecting all actions to +91 8075 959 157 -->
     <section id="inquiry" class="py-32 md:py-48 px-6 md:px-16 bg-black border-t border-white/5">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16 items-center">
             <div class="lg:col-span-6">
-                <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#A8D8B9]/10 text-[#A8D8B9] mb-6 font-medium text-xs tracking-wider uppercase">
+                <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[99px] bg-[#A8D8B9]/10 text-[#A8D8B9] mb-6 font-medium text-xs tracking-wider uppercase reveal-up glare-fx">
                     <i data-lucide="send" class="w-4 h-4 text-[#A8D8B9]"></i>
                     <span>05 // Direct Contact Hub</span>
                 </div>
-                <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-[#FFFFFF] mb-8 leading-[1.15]">
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-[#FFFFFF] mb-8 leading-[1.15] reveal-up" style="--delay:0.1s">
                     Let's build your brand.
                 </h2>
-                <p class="text-lg text-[#AAAAAA] font-normal leading-relaxed mb-10">
+                <p class="text-lg text-[#AAAAAA] font-normal leading-relaxed mb-10 reveal-up" style="--delay:0.2s">
                     Connect directly with Qais and Falah in Kochi. We operate with zero intermediaries to bring your digital vision to life.
                 </p>
-                <div class="p-6 rounded-[24px] bg-[#0D0D0D] border border-white/5 flex items-center gap-4">
+                <div class="p-6 rounded-[24px] bg-[#0D0D0D] border border-white/5 flex items-center gap-4 reveal-up shadow-inner glare-fx" style="--delay:0.3s">
                     <div class="w-3 h-3 rounded-full bg-[#A8D8B9] animate-pulse shrink-0"></div>
-                    <span class="text-sm font-medium text-[#FFFFFF]">Kochi Studio: Active &amp; Online</span>
+                    <span class="text-sm font-medium text-[#FFFFFF] relative z-10">Kochi Studio: Active &amp; Online</span>
                 </div>
             </div>
 
             <div class="lg:col-span-6">
-                <div class="pixel-card pixel-card-mint shadow-2xl space-y-8">
-                    <div class="text-center pb-6 border-b border-white/10">
-                        <div class="w-16 h-16 rounded-full bg-[#A8D8B9]/20 flex items-center justify-center mx-auto mb-4 border border-[#A8D8B9]/40">
-                            <i data-lucide="phone-call" class="w-8 h-8 text-[#A8D8B9]"></i>
+                <div class="pixel-card pixel-card-mint shimmer-card glare-fx shadow-2xl space-y-8 reveal-up" style="--delay:0.15s">
+                    <div class="text-center pb-6 border-b border-white/10 relative z-10">
+                        <div class="w-16 h-16 rounded-full bg-[#A8D8B9]/20 flex items-center justify-center mx-auto mb-4 border border-[#A8D8B9]/40 shadow-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#A8D8B9]" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                            </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-[#FFFFFF] mb-2">Direct Inquiry &amp; WhatsApp</h3>
                         <p class="text-sm text-[#AAAAAA]">Click below to connect instantly with our studio line</p>
                     </div>
 
-                    <!-- Direct WhatsApp / Phone CTA Button -->
-                    <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" aria-label="Launch WhatsApp to +91 8075 959 157" class="w-full py-5 rounded-[9999px] bg-[#A8D8B9] text-[#000000] font-bold text-lg tracking-wide uppercase flex items-center justify-center gap-3 hover:opacity-95 transition-all hover-glow-mint shadow-xl">
-                        <i data-lucide="message-square" class="w-6 h-6 text-[#000000]"></i>
+                    <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" class="w-full py-5 rounded-[9999px] bg-[#A8D8B9] text-[#000000] font-bold text-lg tracking-wide uppercase flex items-center justify-center gap-3 hover:opacity-95 transition-all hover-glow-mint shadow-xl glare-fx relative z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                        </svg>
                         <span>+91 8075 959 157</span>
                     </a>
 
-                    <!-- Commercial Email Link -->
-                    <div class="p-6 rounded-[16px] bg-[#1A1A1A] border border-white/5 flex items-center justify-between">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-white/10">
+                    <div class="p-5 md:p-6 rounded-[16px] bg-[#1A1A1A] border border-white/5 flex items-center justify-between gap-4 relative z-10 glare-fx shadow-inner">
+                        <div class="flex items-center gap-3 md:gap-4 min-w-0">
+                            <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-white/10 shrink-0">
                                 <i data-lucide="mail" class="w-5 h-5 text-[#B5CAFF]"></i>
                             </div>
-                            <div>
+                            <div class="min-w-0">
                                 <div class="text-xs font-mono uppercase tracking-wider text-[#AAAAAA]">Commercial Email</div>
-                                <div class="text-base font-semibold text-[#FFFFFF]">webbes.in@gmail.com</div>
+                                <div class="text-sm md:text-base font-semibold text-[#FFFFFF] truncate">webbes.in@gmail.com</div>
                             </div>
                         </div>
-                        <a href="mailto:webbes.in@gmail.com" aria-label="Send email to webbes.in@gmail.com" class="px-4 py-2 rounded-[9999px] bg-black text-xs font-semibold text-[#FFFFFF] hover:bg-[#B5CAFF] hover:text-[#000000] transition-colors border border-white/10">
-                            Send Email
+                        <a href="mailto:webbes.in@gmail.com" class="px-3 md:px-4 py-2 rounded-[9999px] bg-black text-xs font-semibold text-[#FFFFFF] hover:bg-[#B5CAFF] hover:text-[#000000] transition-colors border border-white/10 shrink-0 glare-fx">
+                            Send
                         </a>
                     </div>
                 </div>
@@ -491,24 +468,26 @@
         </div>
     </section>
 
-    <!-- Stripped Minimal Official Footer -->
-    <footer class="py-16 px-6 md:px-16 bg-black border-t border-white/5">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-sm text-[#AAAAAA] font-normal">
+    <footer class="py-12 md:py-16 px-6 md:px-16 bg-black border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-sm text-[#AAAAAA] font-normal">
             <div class="flex items-center gap-3">
                 <span class="font-bold tracking-[0.2em] text-[#FFFFFF] uppercase">Webbes<span class="text-[#A8D8B9]">.</span></span>
                 <span class="text-white/20">//</span>
                 <span>Kochi, Kerala, India</span>
             </div>
-            <div>&copy; 2026 Webbes Digital Studio. All Rights Reserved.</div>
-            <div class="flex items-center gap-8 font-medium">
-                <a href="mailto:webbes.in@gmail.com" aria-label="Email Studio" class="hover:text-[#FFFFFF] transition-colors">webbes.in@gmail.com</a>
+            <div class="text-xs md:text-sm">&copy; 2026 Webbes Digital Studio. All Rights Reserved.</div>
+            <div class="flex items-center gap-4 md:gap-8 font-medium flex-wrap">
+                <a href="mailto:webbes.in@gmail.com" class="hover:text-[#FFFFFF] transition-colors text-xs md:text-sm">webbes.in@gmail.com</a>
                 <span class="text-white/20">&middot;</span>
-                <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Studio" class="hover:text-[#FFFFFF] transition-colors">+91 8075 959 157</a>
+                <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" class="md:hidden hover:text-[#FFFFFF] transition-colors inline-flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://wa.me/918075959157" target="_blank" rel="noopener noreferrer" class="hidden md:inline hover:text-[#FFFFFF] transition-colors">+91 8075 959 157</a>
             </div>
         </div>
     </footer>
 
-    <!-- Application Script -->
     <script src="script.js"></script>
 </body>
 </html>

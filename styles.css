@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 @layer base {
     html {
@@ -16,76 +16,226 @@
     }
 }
 
-/* Custom Minimal Pastel Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #000000;
-}
+/* ============================================================
+   Custom Minimal Pastel Scrollbar
+   ============================================================ */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000000; }
 ::-webkit-scrollbar-thumb {
     background: #1A1A1A;
     border-radius: 9999px;
     border: 2px solid #000000;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: #A8D8B9;
-}
+::-webkit-scrollbar-thumb:hover { background: #A8D8B9; }
 
-/* Google Pixel Style Surface Cards */
+/* ============================================================
+   Google Pixel Style Surface Cards
+   ============================================================ */
 .pixel-card {
     background-color: #0D0D0D;
     border-radius: 24px;
-    padding: 32px;
+    padding: 28px;
     transition: all 0.3s ease;
-}
-.pixel-card-mint {
-    border-top: 3px solid #A8D8B9;
-}
-.pixel-card-lavender {
-    border-top: 3px solid #B5CAFF;
-}
-.pixel-card-pink {
-    border-top: 3px solid #FFB5C8;
-}
-.pixel-card-peach {
-    border-top: 3px solid #FFD6A5;
+    position: relative;
+    overflow: hidden;
+    /* Added subtle inner shadow for polish */
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05); 
 }
 
-/* Interactive Element Pastel Glow */
+@media (min-width: 768px) {
+    .pixel-card { padding: 32px; }
+}
+
+.pixel-card-mint    { border-top: 3px solid #A8D8B9; }
+.pixel-card-lavender{ border-top: 3px solid #B5CAFF; }
+.pixel-card-pink    { border-top: 3px solid #FFB5C8; }
+.pixel-card-peach   { border-top: 3px solid #FFD6A5; }
+
+/* ============================================================
+   Hover Glows
+   ============================================================ */
 .hover-glow-mint:hover {
-    box-shadow: 0 4px 24px rgba(168, 216, 185, 0.2);
+    box-shadow: 0 4px 32px rgba(168, 216, 185, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.08);
     transform: translateY(-2px);
 }
 .hover-glow-lavender:hover {
-    box-shadow: 0 4px 24px rgba(181, 202, 255, 0.2);
+    box-shadow: 0 4px 32px rgba(181, 202, 255, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.08);
     transform: translateY(-2px);
 }
 
-/* Focus Visible Accessibility */
+/* ============================================================
+   Focus Visible Accessibility
+   ============================================================ */
 :focus-visible {
     outline: 2px solid #A8D8B9;
     outline-offset: 4px;
 }
 
-/* Keyframe animations */
+/* ============================================================
+   Keyframe Animations
+   ============================================================ */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in {
     animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Active Navigation Pill */
+/* ============================================================
+   Active Nav Pill
+   ============================================================ */
 .nav-pill-active {
     background-color: rgba(168, 216, 185, 0.15) !important;
     color: #A8D8B9 !important;
 }
 
-/* Active Bento Tab */
-.bento-tab-active {
-    background-color: #1A1A1A !important;
-    border-top: 3px solid #A8D8B9 !important;
+/* ============================================================
+   SHIMMER / GLARE — Polish & UI/UX Effects
+   ============================================================ */
+
+/* Sweeping shimmer across the page on first load */
+#shimmer-intro {
+    overflow: hidden;
 }
+
+.shimmer-sweep {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(255,255,255,0.06) 50%,
+        rgba(168, 216, 185, 0.08) 55%,
+        rgba(255,255,255,0.04) 60%,
+        transparent 70%
+    );
+    transform: translateX(-100%);
+    animation: shimmerSweep 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+    pointer-events: none;
+}
+
+@keyframes shimmerSweep {
+    0%   { transform: translateX(-100%); opacity: 1; }
+    85%  { transform: translateX(100%); opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+}
+
+/* --- Universal Glare Effect (.glare-fx) for all UI Elements --- */
+.glare-fx {
+    position: relative;
+    overflow: hidden;
+}
+
+.glare-fx::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.08) 40%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.08) 60%,
+        transparent 80%
+    );
+    transform: skewX(-20deg);
+    transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    pointer-events: none;
+    z-index: 20; /* Keep over content but under edges */
+}
+
+/* Trigger glare on hover */
+.glare-fx:hover::after {
+    left: 150%;
+    transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Entrance shimmer on cards at page load */
+@keyframes cardShimmerIn {
+    0%   { left: -150%; }
+    100% { left: 150%; }
+}
+
+.shimmer-card {
+    --shimmer-delay: 0s;
+}
+
+.shimmer-card.shimmer-run::after {
+    animation: cardShimmerIn 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--shimmer-delay) forwards;
+}
+
+/* ============================================================
+   Scroll Reveal Animations
+   ============================================================ */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s),
+                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) var(--delay, 0s);
+}
+
+.reveal-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   Parallax Backgrounds
+   ============================================================ */
+.parallax-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(ellipse 60% 40% at 80% 20%, rgba(168,216,185,0.03) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 30% at 20% 80%, rgba(181,202,255,0.03) 0%, transparent 70%);
+    will-change: transform;
+}
+
+.parallax-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   Mobile Refinements
+   ============================================================ */
+@media (max-width: 767px) {
+    .pixel-card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    /* Tighter hero text on mobile */
+    #hero-text-1 h1 {
+        font-size: 2rem;
+        line-height: 1.15;
+    }
+
+    #hero-text-2 h2,
+    #hero-text-3 h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================================
+   Micro-interactions: smooth border pulse on cards
+   ============================================================ */
+@keyframes borderPulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.6; }
+}
+
+.pixel-card-mint:hover    { animation: borderPulse 2s ease infinite; }
+.pixel-card-lavender:hover{ animation: borderPulse 2s ease infinite; }
